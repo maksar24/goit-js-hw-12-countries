@@ -19,7 +19,7 @@ function onSearch(e) {
   const name = e.target.value.trim();
 
   if (e.target.value.length === 0) {
-    countryContainer.innerHTML = "";
+    refs.countryContainer.innerHTML = "";
     return;
     }
     
@@ -27,6 +27,7 @@ function onSearch(e) {
 };
 
 function appendDirectionMarkup(el) {
+    
     
     if (el.length === 1) {
         const countryMarkup = countryCard(el);

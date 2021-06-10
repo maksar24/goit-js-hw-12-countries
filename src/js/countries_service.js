@@ -12,13 +12,10 @@ export default class CountriesApiService {
         return fetch(url)
             .then(res => {
                 if (res.ok) {
-                    console.log(res);
                     return res.json();
-        } 
-        return Promise.reject('Error! Please try again.' + res.status);
-            })
+                }
+        })
             .then(res => {
-                console.log(res);
             this.onResolved(res)
         })
             .catch(res => {
