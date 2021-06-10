@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,11 +13,12 @@
 
 <body>
   <div class="container">
-    <h1 class="hero-phrase">Directory of countries of the world</h1>
-    <div class="input-container">
-      <input class="input-country search-js" type="text" name="country" placeholder="Enter the country name">
-    </div>
-    <div class="country-container"></div>
+    <form class="search-form" id="search-form">
+      <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+    </form>
+    <ul class="gallery">
+      <!-- Список <li> с карточками изображений -->
+    </ul>
   </div>
 
   <script src="./index.js"></script>
