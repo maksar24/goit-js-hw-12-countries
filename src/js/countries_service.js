@@ -7,22 +7,22 @@ export default class CountriesApiService {
   }
     
     fetchDescriptionCountry() {
-    const url = `${this.address}${this.query}`;
+        const url = `${this.address}${this.query}`;
 
         return fetch(url)
-            .then(this.onFetch)
             .then(res => {
+                if (res.ok) {
+                    console.log(res);
+                    return res.json();
+        } 
+        return Promise.reject('Error! Please try again.' + res.status);
+            })
+            .then(res => {
+                console.log(res);
             this.onResolved(res)
         })
-            .catch(err => {
+            .catch(res => {
             this.onRejected(res);
         });
-    };
-    
-    onFetch(res) {
-        if (res.ok) {
-            return res.json();
-        }
-        return Promise.reject('Error! Please try again.' + res.status);
     };
 };

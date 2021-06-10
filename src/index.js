@@ -1,10 +1,12 @@
 import './sass/main.scss';
 import debounce from 'lodash.debounce';
+import { notice  } from '@pnotify/core';
+import '@pnotify/core/dist/PNotify.css';
 import countryCard from './partials/card_country.hbs';
 import countriesList from './partials/list_countries.hbs';
 import CountriesApiService from './js/countries_service.js';
 
-// defaultModules.set(PNotifyMobile, {});
+
 
 const refs = {
     countryContainer: document.querySelector(".country-container"),
@@ -25,7 +27,7 @@ function onSearch(e) {
 };
 
 function appendDirectionMarkup(el) {
-
+    
     if (el.length === 1) {
         const countryMarkup = countryCard(el);
         refs.countryContainer.innerHTML = countryMarkup;
@@ -38,24 +40,18 @@ function appendDirectionMarkup(el) {
 };
 
 function onNotice() {
-    alert({
+    notice({
+        title: 'Regular Notice',
         text: 'Please, type more specific query',
-        hide: true,
-        delay: 2000,
-        sticker: false,
-        mode: 'dark',
-        width: '100%',
-        icons: 'brighttheme',
-        closer: true,
-        closerHover: false,
+        delay: 1000
     });
 };
 
 function onError() {
-  countryContainer.innerHTML = "";
+  refs.countryContainer.innerHTML = "";
   const error = document.createElement("h1");
   error.textContent = "Sorry, wrong request. Please try again.";
-  countryContainer.appendChild(error);
+  refs.countryContainer.appendChild(error);
 };
 
 function fetchRequest(name) {
