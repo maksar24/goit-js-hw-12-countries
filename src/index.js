@@ -26,7 +26,6 @@ function onSearch(e) {
 
 function appendDirectionMarkup(el) {
     
-    
     if (el.length === 1) {
         const countryMarkup = countryCard(el);
         refs.countryContainer.innerHTML = countryMarkup;
