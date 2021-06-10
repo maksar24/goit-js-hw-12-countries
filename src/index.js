@@ -6,8 +6,6 @@ import countryCard from './partials/card_country.hbs';
 import countriesList from './partials/list_countries.hbs';
 import CountriesApiService from './js/countries_service.js';
 
-
-
 const refs = {
     countryContainer: document.querySelector(".country-container"),
     input: document.querySelector(".input-country"),
