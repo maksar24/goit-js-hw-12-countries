@@ -1,0 +1,62 @@
+body {
+  color: rgba(89, 110, 14, 0.9);
+  background: #e7ce5e;
+  background: linear-gradient(90deg, rgba(206, 231, 94, 0.5), rgba(144, 202, 149, 0.5));
+}
+
+.container {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-country {
+  width: 350px;
+  height: 40px;
+  color: rgb(195, 218, 112);
+  font-family: Mate SC, sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 5px solid rgba(189, 209, 152, 0.7);
+  text-align: center;
+}
+
+.country-container {
+  font-family: Mate SC, sans-serif;
+  text-align: center;
+  font-size: 25px;
+  border: 5px solid rgba(189, 209, 152, 0.7);
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 40px;
+  min-width: 500px;
+}
+
+.hero-phrase {
+  font-family: Mate SC, sans-serif;
+}
+
+.info-wrapper {
+  list-style: none;
+  padding: 0;
+  margin-right: 50px;
+}
+
+.languages {
+  list-style: none;
+  font-size: 18px;
+}
+
+.flag {
+  width: 370px;
+  height: 280px;
+}
+
+.countries-list {
+  list-style: none;
+  padding: 0;
+  font-size: 30px;
+}
